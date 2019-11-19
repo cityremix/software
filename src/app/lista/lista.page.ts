@@ -17,4 +17,8 @@ export class ListaPage implements OnInit {
   {
     this.router.navigateByUrl('home');
   }
+  listalog()
+    {
+      console.log("lista-log");
+    }
 }
