@@ -13,7 +13,8 @@ export class ListaPage implements OnInit {
 
   aprimenu()
   {
-    this.menu.open('first1');
+    this.menu.enable(true);
+    this.menu.open();
   }
   changepage()
   {
@@ -22,7 +23,8 @@ export class ListaPage implements OnInit {
   }
   gohome()
   {
-      this.menu.close('first1');
+      this.menu.close();
+      this.menu.enable(false);
       this.router.navigateByUrl('home');
   }
 

@@ -12,6 +12,7 @@ export class HomePage {
   constructor(private router: Router, private menu : MenuController) {}
     aprimenu()
     {
+      this.menu.enable(true);
       this.menu.open();
       console.log("open");
     }
@@ -22,6 +23,7 @@ export class HomePage {
     changepage()
   {
       this.menu.close();
+      this.menu.enable(false);
       this.router.navigateByUrl('lista');
   }
 }
