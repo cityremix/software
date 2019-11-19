@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { MenuController} from '@ionic/angular';
 import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +9,10 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(private menu: MenuController, private router: Router) {}
-
-    openFirst() {
+  constructor(private router: Router, private menu : MenuController) {}
+    aprimenu()
+    {
       this.menu.open('first');
-      console.log("ok");
     }
     clicklog()
     {
@@ -21,8 +20,7 @@ export class HomePage {
     }
     changepage()
     {
-      this.menu.close('first');
+      this.menu.close();
       this.router.navigateByUrl('lista');
     }
-  
 }

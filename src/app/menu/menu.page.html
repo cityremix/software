@@ -1,20 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons (click)='aprimenu()'>
-              <ion-button>
-                <ion-icon slot="icon-only" name="menu"></ion-icon>
-              </ion-button>
-            <ion-title>
-                CityRemixTerni
-            </ion-title>
-          </ion-buttons>
+      <ion-buttons (click)='openFirst()'>
+          <ion-button>
+            <ion-icon slot="icon-only" name="menu"></ion-icon>
+          </ion-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-menu side="start" menuId="first" contentId="menulat">
   <ion-header>
     <ion-toolbar color="primary">
-      <ion-title>Menu prova</ion-title> 
+      <ion-title>Menu prova</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
@@ -33,24 +30,5 @@
 </ion-menu>
 
 <ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        NOME
-      </ion-col>
-    </ion-row>
-    <br>
-    <ion-row>
-      <ion-col>
-        PLAY-PAUSE
-      </ion-col>
-    </ion-row>
-    <br>
-    <ion-row>
-        <ion-col>
-          TESTO
-        </ion-col>
-      </ion-row>
-  </ion-grid>
 
 </ion-content>
