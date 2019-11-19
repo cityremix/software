@@ -12,15 +12,16 @@ export class HomePage {
   constructor(private router: Router, private menu : MenuController) {}
     aprimenu()
     {
-      this.menu.open('first');
+      this.menu.open();
+      console.log("open");
     }
     clicklog()
     {
       console.log("log");
     }
     changepage()
-    {
+  {
       this.menu.close();
       this.router.navigateByUrl('lista');
-    }
+  }
 }

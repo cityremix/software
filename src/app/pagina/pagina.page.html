@@ -4,23 +4,21 @@
           <ion-button>
             <ion-icon slot="icon-only" name="menu"></ion-icon>
           </ion-button>
-        <ion-title>
-            lista
-        </ion-title>
-</ion-buttons>
+        <ion-title>pagina</ion-title>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-menu side="start" menuId="first1" contentId="menulat">
+<ion-menu side="start" menuId="first2" contentId="menulat">
     <ion-header>
       <ion-toolbar color="primary">
         <ion-title>Menu prova</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
-        <ion-item (click)="gohome()">Home</ion-item>
+        <ion-item (click)="changepage(Home)">Home</ion-item>
         <ion-item>Impostazioni</ion-item>
-        <ion-item >Lista</ion-item>
+        <ion-item>Lista</ion-item>
         <ion-item>Menu Item</ion-item>
         <ion-item>Menu Item</ion-item>
     </ion-content>
@@ -29,7 +27,23 @@
   </ion-menu>
 
 <ion-content>
-  <ion-list>
-    <ion-item (click)="changepage()">Pressa</ion-item>
-  </ion-list>
+    <ion-grid>
+        <ion-row>
+          <ion-col>
+            Pressa
+          </ion-col>
+        </ion-row>
+        <br>
+        <ion-row>
+          <ion-col>
+            PLAY-PAUSE
+          </ion-col>
+        </ion-row>
+        <br>
+        <ion-row>
+            <ion-col>
+              TESTO
+            </ion-col>
+          </ion-row>
+      </ion-grid>
 </ion-content>

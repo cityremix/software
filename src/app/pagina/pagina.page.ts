@@ -3,30 +3,25 @@ import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-lista',
-  templateUrl: './lista.page.html',
-  styleUrls: ['./lista.page.scss'],
+  selector: 'app-pagina',
+  templateUrl: './pagina.page.html',
+  styleUrls: ['./pagina.page.scss'],
 })
-export class ListaPage implements OnInit {
+export class PaginaPage implements OnInit {
 
   constructor(private router:Router, private menu : MenuController) { }
 
   aprimenu()
   {
-    this.menu.open('first1');
+    this.menu.open('first2');
   }
   changepage()
   {
-      this.menu.close('first1');
-      this.router.navigateByUrl('pagina');
-  }
-  gohome()
-  {
-      this.menu.close('first1');
+      this.menu.close('first2');
       this.router.navigateByUrl('home');
   }
 
-    
   ngOnInit() {
   }
+
 }
