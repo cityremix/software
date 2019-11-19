@@ -30,7 +30,7 @@
     <ion-grid>
         <ion-row>
           <ion-col>
-            Pressa
+            Pressa di Terni
           </ion-col>
         </ion-row>
         <br>
@@ -42,8 +42,18 @@
         <br>
         <ion-row>
             <ion-col>
-              TESTO
+                La pressa da dodicimila tonnellate risale al 1934 quando alla Società "Terni" fu affidata la realizzazione dei programmi di armamento che richiedevano l'allestimento di una nuova flotta di navi da battaglia. Nell’ambito del progetto di ammodernamento degli impianti, fu ordinata alla ditta inglese Davy Brothers. Per più d'una caratteristica inedita, venne subito considerata avanguardia del progresso tecnologico.
             </ion-col>
-          </ion-row>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <ion-slides class="image-slider" loop="true" slidesPerView="2">
+                  <ion-slide *ngFor="let img of images">
+                    <img src="../../assets/img/{{img}}" class="thumb-img" imageViewer/>
+                  </ion-slide>
+                </ion-slides>
+          </ion-col>
+        </ion-row>
       </ion-grid>
+      
 </ion-content>

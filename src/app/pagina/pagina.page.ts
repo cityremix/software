@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+import { MenuController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-pagina',
@@ -8,7 +8,8 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['./pagina.page.scss'],
 })
 export class PaginaPage implements OnInit {
-  constructor(private router:Router, private menu : MenuController) { }
+  images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg'];
+  constructor(private router:Router, private menu : MenuController ,public navCtrl: NavController) { }
   play()
   {
     console.log("play");
