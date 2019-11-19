@@ -8,9 +8,14 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['./pagina.page.scss'],
 })
 export class PaginaPage implements OnInit {
-
+  audio: any;
   constructor(private router:Router, private menu : MenuController) { }
-
+  play()
+  {
+    this.audio.play();
+   this.audio.loop = true;
+    console.log("play");
+  }
   aprimenu()
   {
     this.menu.open('first2');
@@ -22,6 +27,9 @@ export class PaginaPage implements OnInit {
   }
 
   ngOnInit() {
+    this.audio = new Audio();
+    this.audio.src = 'file.mp3';
+    this.audio.load();
   }
 
 }
