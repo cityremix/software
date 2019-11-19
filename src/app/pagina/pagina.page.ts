@@ -25,7 +25,6 @@ export class PaginaPage implements OnInit {
       this.menu.enable(false);
       this.router.navigateByUrl('home');
   }
-
   ngOnInit() {
   }
 

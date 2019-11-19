@@ -1,7 +1,5 @@
-page-home {
- 
     ion-slide.swiper-slide {
-        left: 25%;
+        left: 0%;
     }
     
     .slide-zoom {
@@ -9,6 +7,6 @@ page-home {
     }
  
     .thumb-img {
-        padding: 10px;
+        height: 200px;
+        width: 200px;
     }
-}

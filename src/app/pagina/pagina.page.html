@@ -47,11 +47,11 @@
         </ion-row>
         <ion-row>
           <ion-col>
-              <ion-slides class="image-slider" loop="true" slidesPerView="2">
+              <ion-slides scrollbar="true" class="image-slider">
                   <ion-slide *ngFor="let img of images">
                     <img src="../../assets/img/{{img}}" class="thumb-img" imageViewer/>
                   </ion-slide>
-                </ion-slides>
+              </ion-slides>
           </ion-col>
         </ion-row>
       </ion-grid>
