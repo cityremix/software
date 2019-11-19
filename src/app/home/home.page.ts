@@ -19,5 +19,9 @@ export class HomePage {
     {
       console.log("log");
     }
+    changepage()
+    {
+      this.router.navigateByUrl('menu');
+    }
   
 }
