@@ -18,7 +18,7 @@ export class ListaPage implements OnInit {
   }
   changepage()
   {
-      this.menu.close('first1');
+      this.menu.close();
       this.router.navigateByUrl('pagina');
   }
   gohome()
