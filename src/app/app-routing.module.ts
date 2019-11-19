@@ -5,8 +5,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {
-    path: 'menu',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+    path: 'lista',
+    loadChildren: () => import('./lista/lista.module').then( m => m.ListaPageModule)
   },
 ];
 
