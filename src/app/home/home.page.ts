@@ -9,10 +9,10 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(private menuu: MenuController, private router: Router) {}
+  constructor(private menu: MenuController, private router: Router) {}
 
     openFirst() {
-      this.menuu.open('first');
+      this.menu.open('first');
       console.log("ok");
     }
     clicklog()
@@ -21,7 +21,8 @@ export class HomePage {
     }
     changepage()
     {
-      this.router.navigateByUrl('menu');
+      this.menu.close('first');
+      this.router.navigateByUrl('lista');
     }
   
 }

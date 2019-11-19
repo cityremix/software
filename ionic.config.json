@@ -1,5 +1,7 @@
 {
   "name": "CityRemixApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
