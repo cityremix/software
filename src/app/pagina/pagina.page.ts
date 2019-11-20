@@ -24,9 +24,14 @@ export class PaginaPage implements OnInit {
     });
 
     setInterval(() => {
-      this.progress += .1;
+      if(this.progress!=.6){
+        this.progress += .1;
+      }
+      else {
+        this.progress=.0;
+      }
     }, 1000);
-    
+
   }
   play(){
     this.nativeaudio.play('id').then((success)=>{
