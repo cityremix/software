@@ -15,7 +15,11 @@ const routes: Routes = [
   {
     path: 'pagina',
     loadChildren: () => import('./pagina/pagina.module').then( m => m.PaginaPageModule)
+  },  {
+    path: 'archeologia',
+    loadChildren: () => import('./archeologia/archeologia.module').then( m => m.ArcheologiaPageModule)
   },
+
 ];
 
 @NgModule({

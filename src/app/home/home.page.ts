@@ -13,9 +13,10 @@ ciao:String;
   constructor(private router: Router, private menu : MenuController,private prova1:Router,private prova2:Router) {
     this.ciao='http://www.umbriaexperience.it/wp-content/uploads/Piazza-dei-bambini.jpg';
   }
-  /*gotopage(){
-    this.prova1.navigateByUrl();
+  gotopage(){
+    this.prova1.navigateByUrl('archeologia');
   }
+  /*
   gotopage2(){
     this.prova2.navigateByUrl()
   }*/
