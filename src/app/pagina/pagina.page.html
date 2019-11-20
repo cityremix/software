@@ -36,7 +36,14 @@
         <br>
         <ion-row>
           <ion-col>
-            <ion-button (click)="play()">Play-Pause</ion-button>
+            <ion-buttons>
+              <ion-button (click)="play()">
+                  <ion-icon name="play"></ion-icon>
+              </ion-button>
+              <ion-button (click)="play()">
+                  <ion-icon name="pause"></ion-icon>
+                </ion-button>
+            </ion-buttons>
           </ion-col>
         </ion-row>
         <br>
