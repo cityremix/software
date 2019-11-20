@@ -4,7 +4,7 @@
               <ion-button>
                 <ion-icon slot="icon-only" name="menu"></ion-icon>
               </ion-button>
-            <ion-title allign="center" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 25px;">
+            <ion-title class="muovititolo"style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 25px;">
                 GUIDA TERNI
             </ion-title>
     </ion-buttons>
@@ -33,10 +33,10 @@
 <ion-content>
 <ion-img [src]="ciao"></ion-img>
 <ion-text>
-  <h4 class="spazio1" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+  <h1 class="spazio1" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
   INTRODUZIONE
-  </h4>
+  </h1>
 </ion-text>
-<ion-button (click)='gotopage()' color="medium" size="small">NOZIONE DI ARCHEOLOGIA</ion-button>
-<ion-button color="medium" size="small">CASO DI TERNI</ion-button>
+<ion-button class="muovibottone1"(click)='gotopage()' extend="full" color="dark" size="medium">ARCHEOLOGIA</ion-button>
+<ion-button class="muovibottone2" extend="full" color="dark" size="medium">CASO DI TERNI</ion-button>
 </ion-content>
