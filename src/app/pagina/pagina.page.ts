@@ -10,6 +10,9 @@ import { NativeAudio } from '@ionic-native/native-audio/ngx';
 })
 export class PaginaPage implements OnInit {
   images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg'];
+
+  progress=0;
+
   constructor(private router:Router, private menu : MenuController ,public navCtrl: NavController, public nativeaudio : NativeAudio, public platform : Platform) 
   {
     this.platform.ready().then(() => {
@@ -19,6 +22,11 @@ export class PaginaPage implements OnInit {
         console.log(error);
       });
     });
+
+    setInterval(() => {
+      this.progress += .1;
+    }, 1000);
+    
   }
   play(){
     this.nativeaudio.play('id').then((success)=>{
