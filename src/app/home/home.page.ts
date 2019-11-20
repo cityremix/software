@@ -14,12 +14,6 @@ ciao:String;
     this.ciao='http://www.umbriaexperience.it/wp-content/uploads/Piazza-dei-bambini.jpg';
   }
 
-  gotopage(){
-    this.prova1.navigateByUrl();
-  }
-  gotopage2(){
-    this.prova2.navigateByUrl()
-  }
     aprimenu()
     {
       this.menu.enable(true);
