@@ -38,6 +38,14 @@ export class PaginaPage implements OnInit {
       this.menu.enable(false);
       this.router.navigateByUrl('home');
   }
+  stop()
+  {
+    this.nativeaudio.stop('id').then((success)=>{
+      console.log("success stop");
+    },(error)=>{
+      console.log(error);
+    });
+  }
   ngOnInit() {
   }
 
