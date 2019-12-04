@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'archeologia',
     loadChildren: () => import('./archeologia/archeologia.module').then( m => m.ArcheologiaPageModule)
   },
+  {
+    path: 'caso-terni',
+    loadChildren: () => import('./caso-terni/caso-terni.module').then( m => m.CasoTerniPageModule)
+  },
 
 ];
 

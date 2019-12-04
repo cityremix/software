@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons (click)='aprimenu()'>
+          <ion-button>
+            <ion-icon slot="icon-only" name="menu"></ion-icon>
+          </ion-button>
+    <ion-title  allign="center" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 25px;">Caso di Terni</ion-title>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-menu side="start" menuId="first" contentId="menulat">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu prova</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-item (click)='returnHome()'>Home</ion-item>
+        <ion-item>Impostazioni</ion-item>
+        <ion-item (click)="changepage()">
+            <ion-label>Lista</ion-label>
+        </ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+    </ion-content>
+    <ion-content id="menulat">
+    </ion-content>
+  </ion-menu>
+<ion-content>
+</ion-content>

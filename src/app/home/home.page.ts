@@ -16,10 +16,10 @@ ciao:String;
   gotopage(){
     this.prova1.navigateByUrl('archeologia');
   }
-  /*
+  
   gotopage2(){
-    this.prova2.navigateByUrl()
-  }*/
+    this.prova2.navigateByUrl('caso-terni');
+  }
     aprimenu()
     {
       this.menu.enable(true);
