@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons (click)='aprimenu()'>
+              <ion-button>
+                <ion-icon slot="icon-only" name="menu"></ion-icon>
+              </ion-button>
+            <ion-title class="muovititolo"style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 25px;">
+                ELENCO SITI
+            </ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-menu side="start" menuId="first" contentId="menulat">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu prova</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-item (click)="gohome()">Home</ion-item>
+      <ion-item>Impostazioni</ion-item>
+      <ion-item >Lista</ion-item>
+      <ion-item>Menu Item</ion-item>
+      <ion-item>Menu Item</ion-item>
+  </ion-content>
+  <ion-content id="menulat">
+  </ion-content>
+</ion-menu>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>BLABLA</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>BLE BLE</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>BLU BLU</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>BLI BLI</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>BLO BLO</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
