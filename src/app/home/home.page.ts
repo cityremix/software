@@ -10,7 +10,7 @@ import { R3BoundTarget } from '@angular/compiler';
 })
 export class HomePage {
 ciao:String;
-  constructor(private router: Router, private menu : MenuController,private prova1:Router,private prova2:Router) {
+  constructor(private router: Router, private menu : MenuController,private prova1:Router,private prova2:Router,private prova3:Router) {
     this.ciao='http://www.umbriaexperience.it/wp-content/uploads/Piazza-dei-bambini.jpg';
   }
   gotopage(){
@@ -19,6 +19,10 @@ ciao:String;
   
   gotopage2(){
     this.prova2.navigateByUrl('caso-terni');
+  }
+
+  gotopage3(){
+    this.prova3.navigateByUrl('elencositi');
   }
     aprimenu()
     {
