@@ -11,7 +11,14 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
+import { File } from '@ionic-native/file/ngx';
+import {
+  FileTransfer,
+  FileTransferObject
+} from '@ionic-native/file-transfer/ngx';
 
+import { Media, MediaObject } from '@ionic-native/media/ngx';
+import { DatePipe } from '@angular/common';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -22,7 +29,12 @@ import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
     Geolocation,
     NativeGeocoder,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    NativeAudio
+    NativeAudio, 
+    File,
+    FileTransfer,
+    Media,
+    DatePipe
+    
   ],
   bootstrap: [AppComponent]
 })

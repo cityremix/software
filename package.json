@@ -20,8 +20,10 @@
     "@angular/platform-browser-dynamic": "~8.1.2",
     "@angular/router": "~8.1.2",
     "@ionic-native/core": "^5.0.0",
+    "@ionic-native/file": "^5.18.0",
+    "@ionic-native/file-transfer": "^5.18.0",
     "@ionic-native/geolocation": "^5.17.1",
-    "@ionic-native/media": "^5.17.0",
+    "@ionic-native/media": "^5.18.0",
     "@ionic-native/native-audio": "^5.17.0",
     "@ionic-native/native-geocoder": "^5.0.0",
     "@ionic-native/splash-screen": "^5.0.0",
@@ -30,6 +32,7 @@
     "browser": "^0.2.6",
     "cordova-android": "8.1.0",
     "cordova-plugin-file": "^6.0.2",
+    "cordova-plugin-file-transfer": "^1.7.1",
     "cordova-plugin-geolocation": "^4.0.2",
     "cordova-plugin-media": "^5.0.3",
     "cordova-plugin-nativeaudio": "^3.0.9",
@@ -89,7 +92,9 @@
       },
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-geolocation": {},
-      "cordova-plugin-nativegeocoder": {}
+      "cordova-plugin-nativegeocoder": {},
+      "cordova-plugin-file-transfer": {},
+      "cordova-plugin-file": {}
     },
     "platforms": [
       "android"

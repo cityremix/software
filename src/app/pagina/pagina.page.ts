@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuController, NavController, Platform } from '@ionic/angular';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-pagina',
@@ -10,9 +11,8 @@ import { NativeAudio } from '@ionic-native/native-audio/ngx';
 })
 export class PaginaPage implements OnInit {
   images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg'];
-
   progress=0;
-
+  private ita:boolean = true;
   constructor(private router:Router, private menu : MenuController ,public navCtrl: NavController, public nativeaudio : NativeAudio, public platform : Platform) 
   {
     this.platform.ready().then(() => {
@@ -58,6 +58,22 @@ export class PaginaPage implements OnInit {
     },(error)=>{
       console.log(error);
     });
+  }
+
+  cambiatesto()
+  {
+    var elem = document.getElementById("elem");
+    var pulsante=document.getElementById("pulsantelingua");
+    if(this.ita){
+      this.ita = false;
+      pulsante.innerHTML="IT";
+      elem.innerHTML="Testo in Lingua Inglese";
+    }else{
+      this.ita = true;
+      pulsante.innerHTML="En";
+      elem.innerHTML="La pressa da dodicimila tonnellate risale al 1934 quando alla Società \"Terni\" fu affidata la realizzazione dei programmi di armamento che richiedevano l'allestimento di una nuova flotta di navi da battaglia. Nell’ambito del progetto di ammodernamento degli impianti, fu ordinata alla ditta inglese Davy Brothers. Per più d'una caratteristica inedita, venne subito considerata avanguardia del progresso tecnologico.";
+    }
+    console.log("prova");
   }
   ngOnInit() {
   }

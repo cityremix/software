@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'caso-terni',
     loadChildren: () => import('./caso-terni/caso-terni.module').then( m => m.CasoTerniPageModule)
   },
+  {
+    path: 'elencositi',
+    loadChildren: () => import('./elencositi/elencositi.module').then( m => m.ElencositiPageModule)
+  },
 
 ];
 
