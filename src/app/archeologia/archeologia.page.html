@@ -39,13 +39,7 @@
   
       <ion-grid>
         <ion-row class="ion-align-items-center ion-justify-content-center" style="height: 100%">
-          <ion-col>
-            <!-- Backwards -->
-            <ion-fab-button class="skip-btn" color="primary" [disabled]="!is_ready || !is_in_play"
-              (click)="controlSeconds('back')">
-              &nbsp;&nbsp;<ion-icon name="skip-backward"></ion-icon>&nbsp;&nbsp;
-            </ion-fab-button>
-          </ion-col>
+
           <ion-col>
             <!-- Play/Pause -->
             <ion-fab-button class="play-pause-btn" (click)="playRecording()" color="primary" *ngIf="!is_playing"
@@ -58,13 +52,7 @@
               <ion-icon name="pause"></ion-icon>
             </ion-fab-button>
           </ion-col>
-          <ion-col>
-            <!-- Forwards -->
-            <ion-fab-button class="skip-btn" color="primary" [disabled]="!is_ready || !is_in_play"
-              (click)="controlSeconds('forward')">
-              &nbsp;&nbsp;<ion-icon name="skip-forward"></ion-icon>&nbsp;&nbsp;
-            </ion-fab-button>
-          </ion-col>
+          
         </ion-row>
       </ion-grid>
       

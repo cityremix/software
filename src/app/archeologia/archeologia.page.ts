@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { MenuController, Platform, LoadingController, ToastController } from '@ionic/angular';
 import { Media, MediaObject } from '@ionic-native/media/ngx';
 import { R3BoundTarget } from '@angular/compiler';
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
 import {
   NavController,
 } from '@ionic/angular';
@@ -24,7 +25,7 @@ import { DatePipe } from '@angular/common';
 export class ArcheologiaPage implements OnInit {
 
   title = 'I Have a Dream';
-  filename = 'I_Have_a_Dream.mp3';
+  filename = 'file.mp3';
   curr_playing_file: MediaObject;
   storageDirectory: any;
 
@@ -41,6 +42,7 @@ export class ArcheologiaPage implements OnInit {
   get_position_interval: any;
 
   constructor(private home: Router,private menu : MenuController,private router: Router,
+    public nativeaudio : NativeAudio, 
     private platform: Platform,
     private loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
@@ -49,7 +51,12 @@ export class ArcheologiaPage implements OnInit {
     private media: Media,
     private datePipe: DatePipe) 
     {
-      this.platform.ready().then(() => {
+        this.platform.ready().then(() => {
+          this.nativeaudio.preloadSimple('id', 'assets/audio/file.mp3').then((success)=>{
+            console.log("success");
+          },(error)=>{
+            console.log(error);
+          });
         if (this.platform.is('ios')) {
           this.storageDirectory = this.file.dataDirectory;
         } else if (this.platform.is('android')) {
@@ -65,7 +72,7 @@ export class ArcheologiaPage implements OnInit {
     this.home.navigateByUrl('home');
   }
   ngOnInit() {
-    this.prepareAudioFile();
+    //this.prepareAudioFile();
   }
   aprimenu()
   {
@@ -83,10 +90,10 @@ export class ArcheologiaPage implements OnInit {
     this.menu.enable(false);
     this.router.navigateByUrl('lista');
 }
-prepareAudioFile() {
+
+/*prepareAudioFile() {
   let url =
     'https://ia800207.us.archive.org/29/items/MLKDream/MLKDream_64kb.mp3';
-  this.platform.ready().then(() => {
     this.file
       .resolveDirectoryUrl(this.storageDirectory)
       .then(resolvedDirectory => {
@@ -131,7 +138,7 @@ prepareAudioFile() {
           });
       });
   });
-}
+}*/
 
 createAudioFile(pathToDirectory, filename): MediaObject {
   if (this.platform.is('ios')) {
@@ -141,15 +148,12 @@ createAudioFile(pathToDirectory, filename): MediaObject {
     );
   } else {
     // android
-    return this.media.create(pathToDirectory + filename);
+    return this.media.create( 'assets/audio/'+ filename);
   }
 }
 
 getDurationAndSetToPlay() {
-  this.curr_playing_file = this.createAudioFile(
-    this.storageDirectory,
-    this.filename
-  );
+  this.curr_playing_file=this.media.create('assets/audio/'+ this.filename);
   this.curr_playing_file.play();
   this.curr_playing_file.setVolume(0.0); // you don't want users to notice that you are playing the file
   let self = this;
@@ -165,10 +169,7 @@ getDurationAndSetToPlay() {
   }, 100);
 }
 setRecordingToPlay() {
-  this.curr_playing_file = this.createAudioFile(
-    this.storageDirectory,
-    this.filename
-  );
+  this.curr_playing_file=this.media.create('assets/audio/'+ this.filename);
   this.curr_playing_file.onStatusUpdate.subscribe(status => {
     // 2: playing
     // 3: pause
