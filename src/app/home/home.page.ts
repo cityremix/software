@@ -11,7 +11,7 @@ import { R3BoundTarget } from '@angular/compiler';
 export class HomePage {
 ciao:String;
   constructor(private router: Router, private menu : MenuController,private prova1:Router,private prova2:Router,private prova3:Router) {
-    this.ciao='http://www.umbriaexperience.it/wp-content/uploads/Piazza-dei-bambini.jpg';
+    this.ciao='assets/icon/piazza.jpg';
   }
   gotopage(){
     this.prova1.navigateByUrl('archeologia');

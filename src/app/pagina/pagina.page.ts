@@ -67,7 +67,7 @@ export class PaginaPage implements OnInit {
     if(this.ita){
       this.ita = false;
       pulsante.innerHTML="IT";
-      elem.innerHTML="Testo in Lingua Inglese";
+      elem.innerHTML="The 12,000-ton press dates back to 1934 when the 'Terni' company was entrusted with the implementation of the weapons programs that required the construction of a new fleet of battleships. As part of the plant modernization project, it was ordered by the British company Davy Brothers. For more than one novel feature, it was immediately considered the vanguard of technological progress.";
     }else{
       this.ita = true;
       pulsante.innerHTML="En";
