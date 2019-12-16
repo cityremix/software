@@ -13,7 +13,15 @@ export class PaginaPage implements OnInit {
   images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg'];
   progress=0;
   private ita:boolean = true;
-  constructor(private router:Router, private menu : MenuController ,public navCtrl: NavController, public nativeaudio : NativeAudio, public platform : Platform) 
+  constructor
+    (
+    private router:Router,
+    private menu : MenuController,
+    public navCtrl: NavController,
+    public nativeaudio : NativeAudio,
+    public platform : Platform
+    ) 
+    
   {
     this.platform.ready().then(() => {
       this.nativeaudio.preloadSimple('id', 'assets/audio/file.mp3').then((success)=>{

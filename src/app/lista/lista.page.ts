@@ -8,8 +8,9 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['./lista.page.scss'],
 })
 export class ListaPage implements OnInit {
-
-  constructor(private router:Router, private menu : MenuController) { }
+  constructor(private router:Router, private menu : MenuController) 
+  {
+  }
 
   aprimenu()
   {
