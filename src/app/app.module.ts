@@ -5,7 +5,7 @@ import { NativeAudio } from '@ionic-native/native-audio/ngx';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
+import { HTTP } from '@ionic-native/http/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -16,9 +16,16 @@ import {
   FileTransfer,
   FileTransferObject
 } from '@ionic-native/file-transfer/ngx';
-
+import {
+  GoogleMaps,
+  GoogleMap,
+  GoogleMapsEvent
+} from '@ionic-native/google-maps';
 import { Media, MediaObject } from '@ionic-native/media/ngx';
 import { DatePipe } from '@angular/common';
+import { HomePage } from './home/home.page';
+import { MappaPage } from './mappa/mappa.page';
+import { ListaPage } from './lista/lista.page';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -33,7 +40,10 @@ import { DatePipe } from '@angular/common';
     File,
     FileTransfer,
     Media,
-    DatePipe
+    DatePipe,
+    GoogleMaps,
+    HTTP,
+    
     
   ],
   bootstrap: [AppComponent]

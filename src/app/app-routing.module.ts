@@ -15,7 +15,8 @@ const routes: Routes = [
   {
     path: 'pagina',
     loadChildren: () => import('./pagina/pagina.module').then( m => m.PaginaPageModule)
-  },  {
+  },
+  {
     path: 'archeologia',
     loadChildren: () => import('./archeologia/archeologia.module').then( m => m.ArcheologiaPageModule)
   },
@@ -26,7 +27,11 @@ const routes: Routes = [
   {
     path: 'elencositi',
     loadChildren: () => import('./elencositi/elencositi.module').then( m => m.ElencositiPageModule)
-  },
+  },  {
+    path: 'mappa',
+    loadChildren: () => import('./mappa/mappa.module').then( m => m.MappaPageModule)
+  }
+
 
 ];
 

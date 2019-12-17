@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+import { AlertController, Events, MenuController, NavController } from '@ionic/angular';
 import { R3BoundTarget } from '@angular/compiler';
 
 @Component({
@@ -10,7 +10,7 @@ import { R3BoundTarget } from '@angular/compiler';
 })
 export class HomePage {
 ciao:String;
-  constructor(private router: Router, private menu : MenuController,private prova1:Router,private prova2:Router,private prova3:Router) {
+  constructor(private navctrl: NavController, private router: Router, private menu : MenuController,private prova1:Router,private prova2:Router,private prova3:Router) {
     this.ciao='assets/icon/piazza.jpg';
   }
   gotopage(){
@@ -19,6 +19,11 @@ ciao:String;
   
   gotopage2(){
     this.prova2.navigateByUrl('caso-terni');
+  }
+
+  showmap()
+  {
+    this.navctrl.navigateRoot('mappa');
   }
 
   gotopage3(){
