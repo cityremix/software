@@ -5,8 +5,11 @@
                 <ion-icon slot="icon-only" name="menu"></ion-icon>
               </ion-button>
             <ion-title class="muovititolo"style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 25px;">
-                GUIDA TERNI
+                City Remix
             </ion-title>
+            <ion-thumbnail class="logoitt">
+              <img src="assets/icon/logoitt2.jpg">
+            </ion-thumbnail>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -32,11 +35,12 @@
 <ion-img [src]="ciao"></ion-img>
 <ion-text>
   <h1 class="spazio1" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
-  INTRODUZIONE:
+    <br>
+  Introduzione:
   </h1>
 </ion-text>
 <p class="ion-text-center">Quest'app è stata ideata per permettere ai turisti di effettuare un'ottima visita turistica della splendida città di Terni.</p>
-<ion-button class="muovibottone1" (click)='gotopage()' color="dark" size="small">ARCHEOLOGIA</ion-button>
-<ion-button (click)='showmap()' color="dark" size="small">CASO DI TERNI</ion-button>
-<ion-button (click)='gotopage3()' expand="block" color="dark" size="medium">ELENCO SITI</ion-button>
+<!-- <ion-button class="muovibottone1" (click)='gotopage()' color="dark" size="small">ARCHEOLOGIA</ion-button> -->
+<ion-button (click)='showmap()' color="dark" size="small" expand="block" size="medium">Mappa</ion-button>
+<ion-button (click)='changepage()' expand="block" color="dark" size="medium">ELENCO SITI</ion-button>
 </ion-content>
