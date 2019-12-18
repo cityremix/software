@@ -59,6 +59,12 @@ export class PaginaPage implements OnInit {
       this.menu.enable(false);
       this.router.navigateByUrl('home');
   }
+  changepagelista()
+  {
+      this.menu.close();
+      this.menu.enable(false);
+      this.router.navigateByUrl('lista');
+  }
   stop()
   {
     this.nativeaudio.stop('id').then((success)=>{

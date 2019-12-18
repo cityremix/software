@@ -76,6 +76,12 @@ export class FabbricaArmiPage implements OnInit {
       this.menu.enable(false);
       this.router.navigateByUrl('home');
   }
+  changepagelista()
+  {
+      this.menu.close();
+      this.menu.enable(false);
+      this.router.navigateByUrl('lista');
+  }
   stop()
   {
     if (this.ita)
