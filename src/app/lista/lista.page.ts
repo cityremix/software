@@ -8,30 +8,16 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['./lista.page.scss'],
 })
 export class ListaPage implements OnInit {
-  constructor(private router:Router, private menu : MenuController) 
+  constructor(private router:Router) 
   {
-  }
-
-  aprimenu()
-  {
-    this.menu.enable(true);
-    this.menu.open();
   }
   changepage()
   {
-      this.menu.close();
       this.router.navigateByUrl('pagina');
   }
   changepagefabbrica()
   {
-      this.menu.close();
       this.router.navigateByUrl('fabbrica-armi');
-  }
-  gohome()
-  {
-      this.menu.close();
-      this.menu.enable(false);
-      this.router.navigateByUrl('home');
   }
 
     
