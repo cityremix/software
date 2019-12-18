@@ -105,5 +105,4 @@ export class FabbricaArmiPage implements OnInit {
   }
   ngOnInit() {
   }
-
 }
