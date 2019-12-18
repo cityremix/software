@@ -78,11 +78,22 @@ export class FabbricaArmiPage implements OnInit {
   }
   stop()
   {
-    this.nativeaudio.stop('id').then((success)=>{
-      console.log("success stop");
-    },(error)=>{
-      console.log(error);
-    });
+    if (this.ita)
+    {
+      this.nativeaudio.stop('id').then((success)=>{
+        console.log("success stop");
+      },(error)=>{
+        console.log(error);
+      });
+    }
+    else
+    {
+      this.nativeaudio.stop('eng').then((success)=>{
+        console.log("success stop");
+      },(error)=>{
+        console.log(error);
+      });
+    }
   }
 
   cambiatesto()
