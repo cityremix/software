@@ -24,7 +24,7 @@ export class MappaPage implements OnInit {
   }
 
   leafletMap() {
-    this.map = new Map('mapId').setView([42.5689725,12.649871], 9);
+    this.map = new Map('mapId').setView([42.5698675,12.6511036], 9);
 
     tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
       attribution: 'edupala.com'
@@ -32,7 +32,7 @@ export class MappaPage implements OnInit {
 
   
 
-    marker([42.56184, 12.63667]).addTo(this.map)
+    marker([42.5698675,12.6511036]).addTo(this.map)
     .bindPopup('Pressa')
     .openPopup();
     
