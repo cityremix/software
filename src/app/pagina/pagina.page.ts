@@ -73,13 +73,29 @@ export class PaginaPage implements OnInit {
     var elem = document.getElementById("elem");
     var pulsante=document.getElementById("pulsantelingua");
     if(this.ita){
+      this.nativeaudio.stop('id');
       this.ita = false;
       pulsante.innerHTML="IT";
       elem.innerHTML="The 12,000-ton press dates back to 1934 when the 'Terni' company was entrusted with the implementation of the weapons programs that required the construction of a new fleet of battleships. As part of the plant modernization project, it was ordered by the British company Davy Brothers. For more than one novel feature, it was immediately considered the vanguard of technological progress.";
+      this.platform.ready().then(() => {
+        this.nativeaudio.preloadSimple('id', 'assets/audio/FILEINGLESE.mp3').then((success)=>{
+          console.log("success");
+        },(error)=>{
+          console.log(error);
+        });
+      });
     }else{
+      this.nativeaudio.stop('id');
       this.ita = true;
       pulsante.innerHTML="En";
       elem.innerHTML="La pressa da dodicimila tonnellate risale al 1934 quando alla Società \"Terni\" fu affidata la realizzazione dei programmi di armamento che richiedevano l'allestimento di una nuova flotta di navi da battaglia. Nell’ambito del progetto di ammodernamento degli impianti, fu ordinata alla ditta inglese Davy Brothers. Per più d'una caratteristica inedita, venne subito considerata avanguardia del progresso tecnologico.";
+      this.platform.ready().then(() => {
+        this.nativeaudio.preloadSimple('id', 'assets/audio/FILEITA.mp3').then((success)=>{
+          console.log("success");
+        },(error)=>{
+          console.log(error);
+        });
+      });
     }
     console.log("prova");
   }

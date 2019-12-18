@@ -16,11 +16,7 @@ import {
   FileTransfer,
   FileTransferObject
 } from '@ionic-native/file-transfer/ngx';
-import {
-  GoogleMaps,
-  GoogleMap,
-  GoogleMapsEvent
-} from '@ionic-native/google-maps';
+
 import { Media, MediaObject } from '@ionic-native/media/ngx';
 import { DatePipe } from '@angular/common';
 import { HomePage } from './home/home.page';
@@ -41,7 +37,6 @@ import { ListaPage } from './lista/lista.page';
     FileTransfer,
     Media,
     DatePipe,
-    GoogleMaps,
     HTTP,
     
     

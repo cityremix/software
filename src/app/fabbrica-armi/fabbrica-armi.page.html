@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons (click)='aprimenu()'>
+          <ion-button>
+            <ion-icon slot="icon-only" name="menu"></ion-icon>
+          </ion-button>
+        <ion-title>Armi Prodotte</ion-title>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu side="start" menuId="first" contentId="menulat">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu prova</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-item (click)="changepage(Home)">Home</ion-item>
+        <ion-item>Impostazioni</ion-item>
+        <ion-item>Lista</ion-item>
+    </ion-content>
+    <ion-content id="menulat">
+    </ion-content>
+  </ion-menu>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+          <ion-col>
+            Produzione Armi
+          </ion-col>
+          <ion-button (click)="cambiatesto()" id="pulsantelingua">EN</ion-button>
+        </ion-row>
+        <br>
+        <ion-row>
+          <img src="../../assets/img/arma4.jpg">
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-buttons>
+              <ion-button (click)="play()">
+                  <ion-icon name="play"></ion-icon>
+              </ion-button>
+              <ion-button (click)="stop()">
+                  <ion-icon name="pause"></ion-icon>
+                </ion-button>
+                <ion-progress-bar [value]="progress"></ion-progress-bar>
+            </ion-buttons>
+          </ion-col>
+        </ion-row>
+        <br>
+        <ion-row>
+            <ion-col id="elem">
+              Polo di Mantenimento delle Armi Leggere (PMAL), già S.M.A.L (Stabilimento Militare Armamento Leggero), ha il compito di assicurare l’efficienza di materiali, mezzi e equipaggiamenti in dotazione alle Forze Armate e ai Corpi Armati dello Stato con particolare riferimento alle armi leggere (sia individuali che di squadra), alle protezioni balistiche individuali e veicolari, agli strumenti verificatori ed alle attrezzature balistiche in genere.
+            </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <ion-slides scrollbar="true" class="image-slider">
+                  <ion-slide *ngFor="let img of images">
+                    <img src="../../assets/img/{{img}}" class="thumb-img" imageViewer/>
+                  </ion-slide>
+              </ion-slides>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-content>

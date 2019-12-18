@@ -1,54 +1,50 @@
 import { Component, ViewChild, OnInit, ElementRef } from '@angular/core';
 import { Platform, NavController } from "@ionic/angular";
-import { GoogleMaps, GoogleMap, GoogleMapsEvent, LatLng, MarkerOptions, Marker } from "@ionic-native/google-maps/ngx";
 import { NgModule } from '@angular/core';
-
+import { Map, tileLayer, marker } from 'leaflet';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-mappa',
   templateUrl: './mappa.page.html',
   styleUrls: ['./mappa.page.scss'],
 })
 export class MappaPage implements OnInit {
-
-  @ViewChild('mappa', {static:false}) element: ElementRef;
-  map: GoogleMap;
+  map: Map;
+  propertyList = [];
   
-  constructor(public googleMaps: GoogleMaps, public platform: Platform,
-    public nav: NavController) { }
+  constructor(public platform: Platform,
+    public nav: NavController,
+    public router: Router) { }
 
   ngOnInit() {
-    this.platform.ready();
-    this.initMap();
   }
-
+ 
   ionViewDidEnter() {
-    console.log("call ionViewDidLoad");
-    this.platform.ready().then(() => {
-      this.initMap();
-    });
+    this.leafletMap();
   }
 
+  leafletMap() {
+    this.map = new Map('mapId').setView([42.5689725,12.649871], 9);
 
-  initMap() {
-    //this.map = GoogleMaps.create("map_canvas");
-    this.map = GoogleMaps.create(this.element.nativeElement);
-    this.map.one(GoogleMapsEvent.MAP_READY).then((data: any) => {
-      let coordinates: LatLng = new LatLng(36.06731743465648, -79.79521393775941);
-      let position = {
-        target: coordinates,
-        zoom: 17
-      };
-    this.map.animateCamera(position);
-      let markerOptions: MarkerOptions = {
-        position: coordinates,
-        //icon: "../../assets/images/icons8-Marker-64.png",
-        title: 'Greensboro, NC'
-      };
-      const marker = this.map.addMarker(markerOptions)
-        .then((marker: Marker) => {
-          marker.showInfoWindow();
-        });
-    })
+    tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+      attribution: 'edupala.com'
+    }).addTo(this.map);
+
+  
+
+    marker([42.56184, 12.63667]).addTo(this.map)
+    .bindPopup('Pressa')
+    .openPopup();
+    
+    
+}
+  
+goback()
+{
+  this.router.navigateByUrl("home");
+}
+  ionViewWillLeave() {
+    this.map.remove();
   }
 
 }

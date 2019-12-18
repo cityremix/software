@@ -10,7 +10,7 @@ import { R3BoundTarget } from '@angular/compiler';
 })
 export class HomePage {
 ciao:String;
-  constructor(private navctrl: NavController, private router: Router, private menu : MenuController,private prova1:Router,private prova2:Router,private prova3:Router) {
+  constructor(private navctrl: NavController, private router: Router, private menu : MenuController,private prova1:Router,private prova2:Router,private prova3:Router,private prova4:Router) {
     this.ciao='assets/icon/piazza.jpg';
   }
   gotopage(){
@@ -23,7 +23,7 @@ ciao:String;
 
   showmap()
   {
-    this.navctrl.navigateRoot('mappa');
+    this.prova4.navigateByUrl('mappa');
   }
 
   gotopage3(){

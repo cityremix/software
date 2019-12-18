@@ -1,9 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>mappa</ion-title>
+    <ion-title>
+      Mappa
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div #map id="map_canvas" style="height: 100%;"></div>
+  <div id="mapId" style="width: 100%; height: 100%">
+  </div>
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed" (click)="goback()">
+        <ion-fab-button color="light">
+          <ion-icon name="arrow-dropleft"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
 </ion-content>

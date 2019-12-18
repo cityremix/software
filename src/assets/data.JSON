@@ -1,0 +1,16 @@
+{
+   "properties" : [
+   {
+       "city": "Terni",
+       "state" : "IT",
+       "long": 42.56184,
+       "lat": 12.63667
+   },
+   {
+       "city": "Cambridge",
+       "state": "MA",
+       "long": -71.10869,
+       "lat": 42.359103
+   }
+   ]
+}

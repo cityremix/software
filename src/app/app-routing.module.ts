@@ -30,6 +30,10 @@ const routes: Routes = [
   },  {
     path: 'mappa',
     loadChildren: () => import('./mappa/mappa.module').then( m => m.MappaPageModule)
+  },
+  {
+    path: 'fabbrica-armi',
+    loadChildren: () => import('./fabbrica-armi/fabbrica-armi.module').then( m => m.FabbricaArmiPageModule)
   }
 
 

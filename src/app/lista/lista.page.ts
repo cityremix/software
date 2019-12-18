@@ -22,6 +22,11 @@ export class ListaPage implements OnInit {
       this.menu.close();
       this.router.navigateByUrl('pagina');
   }
+  changepagefabbrica()
+  {
+      this.menu.close();
+      this.router.navigateByUrl('fabbrica-armi');
+  }
   gohome()
   {
       this.menu.close();
