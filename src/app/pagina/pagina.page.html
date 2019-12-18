@@ -10,19 +10,21 @@
 </ion-header>
 
 <ion-menu side="start" menuId="first" contentId="menulat">
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Menu prova</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-        <ion-item (click)="changepage(Home)">Home</ion-item>
-        <ion-item>Impostazioni</ion-item>
-        <ion-item>Lista</ion-item>
-    </ion-content>
-    <ion-content id="menulat">
-    </ion-content>
-  </ion-menu>
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-item (click)="changepage()">Home</ion-item>
+      <ion-item>Impostazioni</ion-item>
+      <ion-item>
+          <ion-label style="font-family: Humanst;">Lista</ion-label>
+      </ion-item>
+  </ion-content>
+  <ion-content id="menulat">
+  </ion-content>
+</ion-menu>
 
 <ion-content>
     <ion-grid>
@@ -30,7 +32,7 @@
           <ion-col>
             Pressa di Terni
           </ion-col>
-          <ion-button (click)="cambiatesto()" id="pulsantelingua">EN</ion-button>
+          <ion-button (click)="cambiatesto()" id="pulsantelingua" color="dark">EN</ion-button>
         </ion-row>
         <br>
         <ion-row>
