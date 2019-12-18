@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuController, NavController, Platform } from '@ionic/angular';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-fabbrica-armi',
@@ -88,18 +89,24 @@ export class FabbricaArmiPage implements OnInit {
   {
     var elem = document.getElementById("elem");
     var pulsante=document.getElementById("pulsantelingua");
+    var title = document.getElementById("title");
+    var subtitle = document.getElementById("subtitle");
     if(this.ita){
       this.nativeaudio.stop('id');
       this.nativeaudio.stop('eng');
       this.ita = false;
       pulsante.innerHTML="IT";
       elem.innerHTML="The pole of maintenance of small arms ensures the efficiency of the materials, means and equipment supplied to the Armed Forces and to the Armed Corps of the State especially of small arms (both individual and team), to individual and vehicular ballistic protections, to instrumenters and ballistic equipment in general.";
+      title.innerHTML="Arms factory";
+      subtitle.innerHTML="Weapons pruduced by the arms factory in Terni";
     }else{
       this.nativeaudio.stop('id');
       this.nativeaudio.stop('eng');
       this.ita = true;
-      pulsante.innerHTML="En";
+      pulsante.innerHTML="En";      
       elem.innerHTML="Polo di Mantenimento delle Armi Leggere (PMAL), già S.M.A.L (Stabilimento Militare Armamento Leggero), ha il compito di assicurare l’efficienza di materiali, mezzi e equipaggiamenti in dotazione alle Forze Armate e ai Corpi Armati dello Stato con particolare riferimento alle armi leggere (sia individuali che di squadra), alle protezioni balistiche individuali e veicolari, agli strumenti verificatori ed alle attrezzature balistiche in genere.";
+      title.innerHTML="Produzione armi";
+      subtitle.innerHTML="Armi prodotte dalla fabbrica d'armi di Terni";
     }
     console.log("prova");
   }
