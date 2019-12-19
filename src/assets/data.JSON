@@ -1,16 +1,16 @@
 {
-   "properties" : [
-   {
-       "city": "Terni",
-       "state" : "IT",
-       "long": 42.56184,
-       "lat": 12.63667
-   },
-   {
-       "city": "Cambridge",
-       "state": "MA",
-       "long": -71.10869,
-       "lat": 42.359103
-   }
-   ]
-}
+    "properties" : [
+    {
+        "city": "Terni",
+        "state" : "ITA",
+        "long": 42.5698675,
+        "lat": 12.6511036
+    },
+    {
+        "city": "Terni",
+        "state": "ITA",
+        "long": 42.5637679,
+        "lat": 12.6575752
+    }
+    ]
+ }
